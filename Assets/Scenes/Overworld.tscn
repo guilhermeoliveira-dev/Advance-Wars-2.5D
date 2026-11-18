@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbi6gy4kk03xt"]
 
 [ext_resource type="Script" uid="uid://b258g4apfk54m" path="res://Assets/Scripts/Player.gd" id="2_5500h"]
-[ext_resource type="Texture2D" uid="uid://d0u5w8nibpgl2" path="res://Assets/Sprites/Water_Animation/Tex_Water_Animation.tres" id="2_eqicy"]
+[ext_resource type="PlaneMesh" uid="uid://d3jmutr1j2rfb" path="res://Assets/Models/Meshes/Mesh_Water_Bottom.tres" id="4_us10m"]
 [ext_resource type="Script" uid="uid://d21it673hduoq" path="res://Assets/Scripts/Map.gd" id="5_mm2a0"]
 [ext_resource type="PlaneMesh" uid="uid://bp7i5k4yi3gt3" path="res://Assets/Models/Meshes/Mesh_Water_Top.tres" id="5_x2ybm"]
 [ext_resource type="Resource" uid="uid://bdsgv524fcpgn" path="res://Assets/Scenes/Levels/Level_Test.tres" id="6_jcyn1"]
@@ -28,18 +28,6 @@ adjustment_enabled = true
 adjustment_brightness = 1.05
 adjustment_contrast = 0.86
 adjustment_saturation = 1.2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osddo"]
-albedo_color = Color(0.533333, 0.839216, 1, 1)
-albedo_texture = ExtResource("2_eqicy")
-metallic_texture_channel = 2
-uv1_scale = Vector3(500, 500, 500)
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_jrrgl"]
-lightmap_size_hint = Vector2i(12, 12)
-material = SubResource("StandardMaterial3D_osddo")
-size = Vector2(1000, 1000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_32nj8"]
 size = Vector3(10000, 0.1, 10000)
@@ -77,7 +65,7 @@ shadow_normal_bias = 0.0
 
 [node name="Bottom" type="MeshInstance3D" parent="." unique_id=459045797]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -1.6, 50)
-mesh = SubResource("PlaneMesh_jrrgl")
+mesh = ExtResource("4_us10m")
 skeleton = NodePath("")
 
 [node name="Top" type="MeshInstance3D" parent="." unique_id=437168630]
