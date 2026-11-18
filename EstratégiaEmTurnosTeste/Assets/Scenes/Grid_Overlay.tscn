@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://camh5k0l8rkbl"]
+[gd_scene format=3 uid="uid://camh5k0l8rkbl"]
 
-[ext_resource type="Shader" path="res://Assets/Models/Shaders/Shader_Grid.gdshader" id="1_3mnls"]
+[ext_resource type="Shader" uid="uid://ev17h070hur4" path="res://Assets/Models/Shaders/Shader_Grid.gdshader" id="1_3mnls"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pj71u"]
 render_priority = 0
@@ -17,6 +17,9 @@ shader_parameter/background_color = Color(0, 0, 0, 0)
 material = SubResource("ShaderMaterial_pj71u")
 size = Vector2(1000, 1000)
 
-[node name="GridOverlay" type="MeshInstance3D"]
+[node name="MeshOverlay" type="Node3D" unique_id=283087486]
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=94177988]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+sorting_offset = 1000.0
 mesh = SubResource("PlaneMesh_ladmy")

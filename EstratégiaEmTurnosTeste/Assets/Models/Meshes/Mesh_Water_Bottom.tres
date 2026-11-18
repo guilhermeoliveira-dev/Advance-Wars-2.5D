@@ -1,7 +1,15 @@
-[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://d3jmutr1j2rfb"]
+[gd_resource type="PlaneMesh" format=3 uid="uid://d3jmutr1j2rfb"]
 
-[ext_resource type="Material" uid="uid://c474wrvlgl75w" path="res://Assets/Models/Materials/Material_Water_Bottom.tres" id="1_kthta"]
+[ext_resource type="Texture2D" uid="uid://d0u5w8nibpgl2" path="res://Assets/Sprites/Water_Animation/Tex_Water_Animation.tres" id="1_mktha"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osddo"]
+albedo_color = Color(0.533333, 0.839216, 1, 1)
+albedo_texture = ExtResource("1_mktha")
+metallic_texture_channel = 2
+uv1_scale = Vector3(500, 500, 500)
+texture_filter = 0
 
 [resource]
 lightmap_size_hint = Vector2i(12, 12)
-material = ExtResource("1_kthta")
+material = SubResource("StandardMaterial3D_osddo")
+size = Vector2(1000, 1000)
